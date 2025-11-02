@@ -29,25 +29,18 @@
    python -m pip install uv
    uv pip install -r requirements.txt
 
-4. Run:
+4. Download Piper Voice
+   python3 -m piper.download_voices en_US-lessac-medium
+
+5. Run Piper TTS as a server
+   python -m piper.http_server --model en_US-lessac-medium --port 5002
+
+7. Run:
    uv run voice_agent.py
 
 ## Notes & tips
 
 ## Sources
-
 -   Pipecat docs / quickstart. :contentReference[oaicite:5]{index=5}
 -   Piper TTS installation and API. :contentReference[oaicite:6]{index=6}
 -   Whisper (openai-whisper) details. :contentReference[oaicite:7]{index=7}
-
-## Download voices
-
-python3 -m piper.download_voices en_US-lessac-medium
-
-## Running the Piper TTS
-
-python -m piper.http_server --model en_US-lessac-medium --port 5002
-
-## Running the voice agent:
-
-uv run voice_agent.py
